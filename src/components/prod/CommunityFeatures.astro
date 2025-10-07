@@ -1,0 +1,74 @@
+---
+const features = [
+  {
+    icon: '/images/community/Membership-Organisations.svg',
+    title: 'Membership Organisations',
+    description: 'Our membership management software provides full automation of membership renewals and payments'
+  },
+  {
+    icon: '/images/community/National-Associations.svg',
+    title: 'National Associations',
+    description: 'Our membership management software provides full automation of membership renewals and payments'
+  },
+  {
+    icon: '/images/community/Clubs-And-Groups.svg',
+    title: 'Clubs And Groups',
+    description: 'Our membership management software provides full automation of membership renewals and payments'
+  }
+];
+---
+
+<section class="community-features page-sec">
+  <div class="container">
+    <div class="community-features__inner">
+      
+      <!-- Header -->
+      <div class="community-features__header">
+        <h2 class="community-features__title">
+          Manage your entire community<br />in a single system
+        </h2>
+        <p class="community-features__subtitle">Who is Nextcent suitable for?</p>
+      </div>
+
+      <!-- Desktop Card Grid -->
+      <div class="community-features__card-list">
+        {features.map((feature) => (
+          <div class="community-features__card">
+            <div class="community-features__card-header">
+              <img 
+                src={feature.icon} 
+                alt={`${feature.title} icon`}
+                class="community-features__icon"
+              />
+              <h3 class="community-features__card-title">{feature.title}</h3>
+            </div>
+            <p class="community-features__card-description">{feature.description}</p>
+          </div>
+        ))}
+      </div>
+
+      <!-- Mobile Slider -->
+      <div class="community-features__slider swiper">
+        <div class="swiper-wrapper">
+          {features.map((feature) => (
+            <div class="swiper-slide">
+              <div class="community-features__card">
+                <div class="community-features__card-header">
+                  <img 
+                    src={feature.icon} 
+                    alt={`${feature.title} icon`}
+                    class="community-features__icon"
+                  />
+                  <h3 class="community-features__card-title">{feature.title}</h3>
+                </div>
+                <p class="community-features__card-description">{feature.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div class="swiper-pagination community-features__pagination"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
