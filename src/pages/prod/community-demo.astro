@@ -1,0 +1,57 @@
+---
+import ProdLayout from "../../layouts/ProdLayout.astro";
+import CommunityFeatures from "../../components/prod/CommunityFeatures.astro";
+---
+
+<ProdLayout title="Community Features Demo - Astro Brand Starter">
+  <CommunityFeatures />
+  
+  <section class="page-sec">
+    <div class="container">
+      <div class="demo-info">
+        <h2>Community Features Component</h2>
+        <p class="body-1">This section showcases community management features with:</p>
+        <ul class="body-2">
+          <li>💻 Desktop: Three-column grid layout with cards</li>
+          <li>📱 Mobile: Swiper slider with pagination dots</li>
+          <li>🎯 Three feature cards with icons, titles, and descriptions</li>
+          <li>✨ Hover effects with shadow and lift animation</li>
+          <li>♿ Full keyboard navigation and accessibility</li>
+          <li>🎨 Custom icons from /images/community/</li>
+        </ul>
+        <div style="margin-top: 32px;">
+          <a href="/" class="btn btn--primary">Back to Home</a>
+          <a href="/prod/design-system" class="btn btn--primary" style="margin-left: 16px;">Design System</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</ProdLayout>
+
+<style lang="scss">
+  @use "../../scss/utils/variables" as *;
+
+  .demo-info {
+    padding: 60px 0;
+    max-width: 800px;
+    margin: 0 auto;
+
+    h2 {
+      margin-bottom: 24px;
+    }
+
+    p {
+      margin-bottom: 24px;
+      color: $color-grey;
+    }
+
+    ul {
+      margin-left: 24px;
+      
+      li {
+        margin-bottom: 12px;
+        color: $color-d-grey;
+      }
+    }
+  }
+</style>
