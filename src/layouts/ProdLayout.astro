@@ -1,7 +1,7 @@
 ---
 const { title = "Prod Page" } = Astro.props;
 import '../scss/main.scss';
-// import MainNav from '../components/MainNav.astro';
+import MainNav from '../components/prod/MainNav.astro';
 ---
 <html>
   <head>
@@ -11,7 +11,7 @@ import '../scss/main.scss';
     <title>{title}</title>
   </head>
   <body>
-    
+    <MainNav />
     <slot />
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
