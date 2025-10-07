@@ -1,0 +1,168 @@
+// ==========================================================================
+// Hero Slider Component
+// ==========================================================================
+@use "../utils/variables" as *;
+
+.hero-slider {
+  background-color: $color-silver;
+  padding: 96px 0 32px;
+  overflow: hidden;
+
+  @media (max-width: 767px) {
+    padding: 64px 0 24px;
+  }
+
+  &__swiper {
+    width: 100%;
+    overflow: visible;
+  }
+
+  &__slide {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+
+    @media (min-width: $md) {
+      min-height: 500px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+
+    @media (max-width: 767px) {
+      flex-direction: column-reverse;
+      gap: 32px;
+      text-align: center;
+    }
+
+    @media (min-width: $md) {
+      gap: 104px;
+    }
+  }
+
+  &__text-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    flex: 1;
+    max-width: 600px;
+
+    @media (max-width: 767px) {
+      align-items: center;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    width: 100%;
+
+    @media (max-width: 767px) {
+      align-items: center;
+    }
+  }
+
+  &__title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: $color-d-grey;
+    margin: 0;
+
+    @media (min-width: $md) {
+      font-size: 64px;
+      line-height: 76px;
+    }
+  }
+
+  &__title-highlight {
+    color: $color-primary;
+  }
+
+  &__subtitle {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $color-grey;
+    margin: 0;
+  }
+
+  &__image-wrapper {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    @media (max-width: 767px) {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    max-width: 397px;
+    display: block;
+
+    @media (max-width: 767px) {
+      max-width: 280px;
+    }
+  }
+
+  // Swiper Pagination
+  &__pagination {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 40px;
+    bottom: auto !important;
+
+    @media (max-width: 767px) {
+      margin-top: 32px;
+    }
+  }
+
+  // Custom pagination bullets
+  :global(.swiper-pagination-bullet) {
+    width: 10px;
+    height: 10px;
+    background-color: $color-primary;
+    opacity: 0.3;
+    border-radius: 50%;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+    margin: 0 !important;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  :global(.swiper-pagination-bullet-active) {
+    opacity: 1;
+  }
+
+  // Disable default swiper button styles on mobile
+  @media (max-width: 767px) {
+    :global(.swiper-button-next),
+    :global(.swiper-button-prev) {
+      display: none;
+    }
+  }
+}
