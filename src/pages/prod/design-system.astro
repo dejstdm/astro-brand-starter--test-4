@@ -190,10 +190,14 @@ import ProdLayout from "../../layouts/ProdLayout.astro";
     }
 
     .button-examples {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 16px;
       margin: 20px 0;
+
+      @media (max-width: 767px) {
+        grid-template-columns: 1fr;
+      }
     }
 
     ul {
