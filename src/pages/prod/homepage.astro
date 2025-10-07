@@ -3,12 +3,22 @@ import ProdLayout from "../../layouts/ProdLayout.astro";
 import HeroSlider from "../../components/prod/HeroSlider.astro";
 import Clients from "../../components/prod/Clients.astro";
 import CommunityFeatures from "../../components/prod/CommunityFeatures.astro";
+import SplitSection from "../../components/prod/SplitSection.astro";
 ---
 
 <ProdLayout title="Astro Brand Starter - Home">
   <HeroSlider />
   <Clients />
   <CommunityFeatures />
+  <SplitSection
+    title="The unseen of spending three years at Pixelgrade"
+    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo ipsum. Sed accumsan quam vitae est varius fringilla. Pellentesque placerat vestibulum lorem sed porta. Nullam mattis tristique iaculis. Nullam pulvinar sit amet risus pretium auctor. Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec elementum pulvinar odio."
+    image="/images/unlock/unlock.png"
+    imageAlt="Team collaboration illustration"
+    buttonText="Learn More"
+    buttonLink="#learn-more"
+    imagePosition="left"
+  />
 
   <section class="page-sec page-sec--homepage">
     <div class="container">
