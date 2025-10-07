@@ -1,0 +1,45 @@
+---
+const logos = [
+  { src: '/images/clients/logo1.svg', alt: 'Client logo 1' },
+  { src: '/images/clients/logo2.svg', alt: 'Client logo 2' },
+  { src: '/images/clients/logo3.svg', alt: 'Client logo 3' },
+  { src: '/images/clients/logo4.svg', alt: 'Client logo 4' },
+  { src: '/images/clients/logo5.svg', alt: 'Client logo 5' },
+  { src: '/images/clients/logo6.svg', alt: 'Client logo 6' },
+  { src: '/images/clients/logo7.svg', alt: 'Client logo 7' },
+];
+---
+
+<section class="clients page-sec">
+  <div class="container">
+    <div class="clients__inner">
+      <!-- Header -->
+      <div class="clients__header">
+        <h2 class="clients__title">Our Clients</h2>
+        <p class="clients__description">We have been working with some Fortune 500+ clients</p>
+      </div>
+
+      <!-- Logo List - Desktop -->
+      <div class="clients__logo-list">
+        {logos.map((logo) => (
+          <div class="clients__logo">
+            <img src={logo.src} alt={logo.alt} />
+          </div>
+        ))}
+      </div>
+
+      <!-- Logo Slider - Mobile -->
+      <div class="clients__logo-slider swiper">
+        <div class="swiper-wrapper">
+          {logos.map((logo) => (
+            <div class="swiper-slide">
+              <div class="clients__logo">
+                <img src={logo.src} alt={logo.alt} />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
