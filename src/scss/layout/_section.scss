@@ -1,0 +1,41 @@
+// ==========================================================================
+// Section Layout Styles
+// ==========================================================================
+
+@use "../utils/variables" as *;
+
+// ==========================================================================
+// Section Base Classes
+// ==========================================================================
+
+.sec {
+  padding: 64px 0;
+
+  &__header {
+    margin-bottom: 32px;
+
+    @media (min-width: $lg) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 44px;
+    margin-bottom: 8px;
+    color: var(--color-dark-grey);
+  }
+
+  &__subtitle {
+    color: var(--color-text-primary);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  &__content {
+    // Base content wrapper styles
+  }
+}

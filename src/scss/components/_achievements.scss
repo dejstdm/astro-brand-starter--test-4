@@ -1,0 +1,102 @@
+@use "../utils/variables" as *;
+
+// ==========================================================================
+// Achievements Component
+// ==========================================================================
+
+.achievements {
+  // Content wrapper
+  &__content {
+    @media (min-width: $lg) {
+      display: flex;
+      align-items: center;
+      gap: 72px;
+    }
+  }
+
+  // Header Section
+  &__header {
+    @media (min-width: $lg) {
+      flex: 0 0 540px;
+    }
+  }
+
+  &__title {
+    @media (min-width: $lg) {
+      max-width: 408px;
+    }
+  }
+
+  &__title-highlight {
+    color: var(--color-dark-grey);
+  }
+
+  &__title-primary {
+    color: var(--color-primary);
+  }
+
+  // Stats Section
+  &__stats {
+    @media (min-width: $lg) {
+      flex: 1;
+    }
+  }
+
+  &__stats-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @media (min-width: $md) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    @media (min-width: $lg) {
+      gap: 30px 30px;
+    }
+  }
+
+  // Individual Stat
+  &__stat {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__stat-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__stat-content {
+    flex: 1;
+  }
+
+  &__stat-number {
+    color: var(--color-dark-grey);
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 36px;
+    margin-bottom: 0;
+  }
+
+  &__stat-label {
+    color: var(--color-grey);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+  }
+}

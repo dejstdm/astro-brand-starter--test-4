@@ -1,0 +1,53 @@
+// ==========================================================================
+// Container Layout 
+// ==========================================================================
+@use "../utils/variables" as *;
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 35px;
+  padding-right: 35px;
+  
+  // Tablet and up
+  @media (min-width: $md) {
+    max-width: 720px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  // Desktop and up
+  @media (min-width: $lg) {
+    max-width: 960px;
+  }
+  
+  // Large desktop and up
+  @media (min-width: $xl) {
+    max-width: 1140px;
+  }
+  
+  // Extra large desktop and up
+  @media (min-width: $xxl) {
+    max-width: 1320px;
+  }
+  
+  // Custom breakpoint for 1440px pages
+  @media (min-width: 1440px) {
+    max-width: 1152px;
+  }
+}
+
+.container-fluid {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 35px;
+  padding-right: 35px;
+  
+  // Tablet and up
+  @media (min-width: $md) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

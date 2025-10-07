@@ -1,0 +1,117 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+  // ==========================================================================
+  // Brand Colors
+  // ==========================================================================
+  
+  // Primary Brand Colors
+  --color-primary: #4caf4f;           // Brand/Primary
+  --color-secondary: #263238;         // Brand/Secondary  
+  --color-info: #2194f3;              // Brand/Info
+  --color-primary-blue: #0671e0;      // Primary/M_Blue
+  
+  // ==========================================================================
+  // Neutral Colors
+  // ==========================================================================
+  
+  // Text & Content Colors
+  --color-black: #263238;             // Neutral/Black
+  --color-dark-grey: #4d4d4d;        // Neutral/D_Grey
+  --color-grey: #717171;              // Neutral/Grey
+  --color-light-grey: #89939e;        // Neutral/L_Grey
+  --color-grey-blue: #abbed1;        // Neutral/Grey_Blue
+  --color-silver: #f5f7fa;           // Neutral/Silver
+  --color-white: #ffffff;             // Neutral/White
+  
+  // ==========================================================================
+  // Color Shades (Darker variants)
+  // ==========================================================================
+  
+  --color-shade-1: #43a046;          // Shade/S1
+  --color-shade-2: #388e3b;          // Shade/S2
+  --color-shade-3: #237d31;          // Shade/S3
+  --color-shade-4: #1b5e1f;          // Shade/S4
+  --color-shade-5: #103e13;           // Shade/S5
+  
+  // ==========================================================================
+  // Color Tints (Lighter variants)
+  // ==========================================================================
+  
+  --color-tint-1: #66bb69;           // Tint/T1
+  --color-tint-2: #81c784;           // Tint/T2
+  --color-tint-3: #a5d6a7;           // Tint/T3
+  --color-tint-4: #c8e6c9;           // Tint/T4
+  --color-tint-5: #e8f5e9;           // Tint/T5
+  
+  // ==========================================================================
+  // Action Colors
+  // ==========================================================================
+  
+  --color-warning: #fbc02d;           // Action/Warning
+  --color-error: #e53835;             // Action/Error
+  --color-success: #2e7d31;           // Action/Success
+  
+  // ==========================================================================
+  // Semantic Color Mappings
+  // ==========================================================================
+  
+  // Text Colors
+  --color-text-primary: var(--color-black);
+  --color-text-secondary: var(--color-light-grey);
+  --color-text-muted: var(--color-grey);
+  --color-text-dark: var(--color-black);
+  
+  // Link Colors
+  --color-link: var(--color-primary-blue);
+  --color-link-hover: var(--color-shade-1);
+  
+  // Background Colors
+  --color-bg-primary: var(--color-white);
+  --color-bg-secondary: var(--color-silver);
+  --color-bg-dark: var(--color-black);
+  
+  // Border Colors
+  --color-border-light: var(--color-grey-blue);
+  --color-border-medium: var(--color-grey);
+  --color-border-dark: var(--color-dark-grey);
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+img,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    appearance: none;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+}
