@@ -1,5 +1,5 @@
 // ==========================================================================
-// Container Layout 
+// Container Layout (Based on Figma Design System)
 // ==========================================================================
 @use "../utils/variables" as *;
 
@@ -7,47 +7,67 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 35px;
-  padding-right: 35px;
+  padding-left: 20px;
+  padding-right: 20px;
   
-  // Tablet and up
+  // Mobile: 315px container width
+  // With 20px padding on each side, total space = 355px
+  max-width: 355px;
+  
+  // Desktop: 1152px container width at 1440px viewport
+  // Side margins: 144px each side, gutters: 24px each side
   @media (min-width: $md) {
-    max-width: 720px;
-    padding-left: 15px;
-    padding-right: 15px;
+    max-width: calc(1152px + 48px); // 1152px + 24px gutters on each side
+    padding-left: 24px;
+    padding-right: 24px;
   }
   
-  // Desktop and up
-  @media (min-width: $lg) {
-    max-width: 960px;
-  }
-  
-  // Large desktop and up
-  @media (min-width: $xl) {
-    max-width: 1140px;
-  }
-  
-  // Extra large desktop and up
-  @media (min-width: $xxl) {
-    max-width: 1320px;
-  }
-  
-  // Custom breakpoint for 1440px pages
+  // Large viewport: maintain 144px side margins
   @media (min-width: 1440px) {
-    max-width: 1152px;
+    max-width: calc(1440px - 288px); // 1440px - (144px × 2 side margins)
+    padding-left: 24px;
+    padding-right: 24px;
   }
 }
 
+// Nav container variant (1228px width)
+.container--nav {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  
+  max-width: 355px;
+  
+  @media (min-width: $md) {
+    max-width: calc(1228px + 48px); // 1228px + 24px gutters on each side
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  
+  @media (min-width: 1440px) {
+    max-width: calc(1440px - 212px); // Approximately 1228px centered
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+// Fluid container (no max-width)
 .container-fluid {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 35px;
-  padding-right: 35px;
+  padding-left: 20px;
+  padding-right: 20px;
   
-  // Tablet and up
   @media (min-width: $md) {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  
+  @media (min-width: 1440px) {
+    padding-left: 144px;
+    padding-right: 144px;
   }
 }

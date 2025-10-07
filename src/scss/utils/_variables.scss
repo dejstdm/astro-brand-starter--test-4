@@ -7,3 +7,96 @@ $md: 768px; // Desktop starts here
 $lg: 992px;
 $xl: 1200px;
 $xxl: 1400px;
+
+// ==========================================================================
+// Color Palette
+// ==========================================================================
+
+// Neutral Colors
+$color-black: #263238;
+$color-d-grey: #4D4D4D;
+$color-grey: #717171;
+$color-l-grey: #89939E;
+$color-grey-blue: #ABBED1;
+$color-silver: #F5F7FA;
+$color-white: #FFFFFF;
+
+// Brand Colors
+$color-primary: #4CAF4F;
+$color-secondary: #263238;
+$color-info: #2194F3;
+
+// Primary Shades
+$color-shade-1: #43A046;
+$color-shade-2: #388E3B;
+$color-shade-3: #237D31;
+$color-shade-4: #1B5E1F;
+$color-shade-5: #103E13;
+
+// Primary Tints
+$color-tint-1: #66BB69;
+$color-tint-2: #81C784;
+$color-tint-3: #A5D6A7;
+$color-tint-4: #C8E6C9;
+$color-tint-5: #E8F5E9;
+
+// Action Colors
+$color-warning: #FBC02D;
+$color-error: #E53835;
+$color-success: #2E7D31;
+
+// ==========================================================================
+// Container Widths (Based on Figma Design)
+// ==========================================================================
+$container-mobile: 315px;
+$container-desktop: 1152px;
+$container-nav: 1228px;
+$container-side-margin: 144px;
+$container-gutter: 24px;
+
+// ==========================================================================
+// CSS Custom Properties (For Runtime Usage)
+// ==========================================================================
+
+:root {
+  // Neutral Colors
+  --color-black: #{$color-black};
+  --color-d-grey: #{$color-d-grey};
+  --color-grey: #{$color-grey};
+  --color-l-grey: #{$color-l-grey};
+  --color-grey-blue: #{$color-grey-blue};
+  --color-silver: #{$color-silver};
+  --color-white: #{$color-white};
+
+  // Brand Colors
+  --color-primary: #{$color-primary};
+  --color-secondary: #{$color-secondary};
+  --color-info: #{$color-info};
+
+  // Primary Shades
+  --color-shade-1: #{$color-shade-1};
+  --color-shade-2: #{$color-shade-2};
+  --color-shade-3: #{$color-shade-3};
+  --color-shade-4: #{$color-shade-4};
+  --color-shade-5: #{$color-shade-5};
+
+  // Primary Tints
+  --color-tint-1: #{$color-tint-1};
+  --color-tint-2: #{$color-tint-2};
+  --color-tint-3: #{$color-tint-3};
+  --color-tint-4: #{$color-tint-4};
+  --color-tint-5: #{$color-tint-5};
+
+  // Action Colors
+  --color-warning: #{$color-warning};
+  --color-error: #{$color-error};
+  --color-success: #{$color-success};
+
+  // Semantic Aliases
+  --color-text-primary: #{$color-black};
+  --color-text-secondary: #{$color-grey};
+  --color-text-muted: #{$color-l-grey};
+  --color-border: #{$color-grey-blue};
+  --color-background: #{$color-white};
+  --color-background-light: #{$color-silver};
+}
