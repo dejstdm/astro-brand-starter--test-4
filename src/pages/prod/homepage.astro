@@ -1,8 +1,42 @@
 ---
 import ProdLayout from "../../layouts/ProdLayout.astro";
-
 ---
+
 <ProdLayout>
-  
+  <section class="page-sec page-sec--homepage">
+    <div class="container">
+      <div class="homepage sec">
+        <div class="homepage__content sec__content">
+          <h1>Astro Brand Starter</h1>
+          <p class="body-1">Welcome to the production-ready Astro brand starter.</p>
+          
+          <div class="homepage__links">
+            <a href="/prod/design-system" class="btn btn--primary">View Design System</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </ProdLayout>
 
+<style lang="scss">
+  @use "../../scss/utils/variables" as *;
+
+  .homepage {
+    padding: 80px 0;
+    text-align: center;
+
+    &__links {
+      margin-top: 40px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: $color-grey;
+      margin-bottom: 0;
+    }
+  }
+</style>
