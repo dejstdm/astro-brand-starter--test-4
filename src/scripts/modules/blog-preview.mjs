@@ -10,14 +10,14 @@ export function initBlogPreview() {
     return;
   }
 
-  const blogSlider = document.querySelector('.blog-preview__slider');
-  
+  const blogSlider = document.querySelector('.blog-preview__list');
+
   if (!blogSlider) {
     return;
   }
 
   // Initialize Swiper for mobile only
-  const swiper = new Swiper('.blog-preview__slider', {
+  const swiper = new Swiper('.blog-preview__list', {
     // Slider settings
     slidesPerView: 1,
     spaceBetween: 17,

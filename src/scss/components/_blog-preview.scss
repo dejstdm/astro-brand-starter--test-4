@@ -40,24 +40,22 @@
     max-width: 628px;
   }
 
-  // Desktop Grid - Hidden on mobile
-  &__grid {
-    display: none;
-  }
-
-  // Mobile Slider - Visible on mobile
-  &__slider {
-    display: block;
+  // Cards List - Swiper container
+  &__list {
     overflow: visible;
     width: 100%;
-    
+
     .swiper-wrapper {
       display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
     }
 
     .swiper-slide {
-      width: 100%;
+      width: auto;
       max-width: 368px;
+      flex-shrink: 0;
     }
   }
 
@@ -121,18 +119,21 @@
       margin-bottom: 0;
     }
 
-    // Show grid on desktop
-    &__grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      justify-content: center;
-      align-items: flex-start;
-    }
+    // Desktop: disable swiper, show as grid
+    &__list {
+      .swiper-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        justify-content: center;
+        align-items: flex-start;
+      }
 
-    // Hide slider on desktop
-    &__slider {
-      display: none;
+      .swiper-slide {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+      }
     }
 
     &__card {
