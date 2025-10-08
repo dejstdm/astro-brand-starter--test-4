@@ -1,0 +1,50 @@
+---
+import ProdLayout from "../../layouts/ProdLayout.astro";
+import BlogPreview from "../../components/prod/BlogPreview.astro";
+
+const blogCards = [
+  {
+    image: "https://api.builder.io/api/v1/image/assets/TEMP/a8dedde3c27ec5ec6a4f17e9cf6fdc96c66228bd",
+    title: "Creating Streamlined Safeguarding Processes with OneRen",
+    link: "#blog-1",
+    imageAlt: "Team member working on laptop"
+  },
+  {
+    image: "https://api.builder.io/api/v1/image/assets/TEMP/4f8e8c5dfb2d0fa8e9199b25302a4175ee046b30",
+    title: "What are your safeguarding responsibilities and how can you manage them?",
+    link: "#blog-2",
+    imageAlt: "Person working on laptop with coffee"
+  },
+  {
+    image: "https://api.builder.io/api/v1/image/assets/TEMP/77e832aa004656cddff1d4f686a81f9da2239530",
+    title: "Revamping the Membership Model with Triathlon Australia",
+    link: "#blog-3",
+    imageAlt: "Laptop with yellow screen and plant"
+  },
+  {
+    image: "https://api.builder.io/api/v1/image/assets/TEMP/4f8e8c5dfb2d0fa8e9199b25302a4175ee046b30",
+    title: "Building Strong Community Connections Through Digital Platforms",
+    link: "#blog-4",
+    imageAlt: "Person working on laptop with coffee"
+  }
+];
+---
+
+<ProdLayout title="Blog Preview Demo - Astro Brand Starter">
+  <BlogPreview 
+    title="Caring is the new marketing"
+    subtitle="The Nexcent blog is the best place to read about the latest membership insights, trends and more. See who's joining the community, read about how our community are increasing their membership income and lot's more."
+    cards={blogCards}
+  />
+
+  <section class="page-sec">
+    <div class="container">
+      <div class="sec">
+        <div class="sec__content" style="text-align: center; padding: 40px 0;">
+          <a href="/prod/design-system" class="btn btn--primary">Back to Design System</a>
+          <a href="/" class="btn btn--secondary" style="margin-left: 16px;">Back to Home</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</ProdLayout>

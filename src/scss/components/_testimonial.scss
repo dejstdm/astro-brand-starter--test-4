@@ -1,158 +1,144 @@
-.testimonial {
-  padding: 64px 0;
+// ==========================================================================
+// Testimonial Component
+// ==========================================================================
+@use "../utils/variables" as *;
 
+.testimonial {
+  
   &__content {
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    gap: 16px;
+  }
+
+  &__image-wrapper {
+    width: 100%;
+    max-width: 315px;
+    margin: 0 auto;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px 0 rgba(171, 190, 209, 0.40);
+    object-fit: cover;
+  }
+
+  &__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+    width: 100%;
   }
 
   &__text {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
   }
 
-  &__title {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 16px;
-  }
-
-  &__subtitle {
-    font-size: 18px;
-    margin-bottom: 32px;
-    opacity: 0.8;
-  }
-  
   &__quote {
-    max-width: 600px;
-    margin: 0 auto;
+    color: $color-grey;
+    font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0;
   }
-  
-  &__quote blockquote {
-    font-size: 20px;
-    font-style: italic;
-    line-height: 1.6;
-    margin-bottom: 32px;
-    padding: 0 16px;
+
+  &__author-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
   }
 
   &__author {
+    color: $color-primary;
+    font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+  }
+
+  &__author-org {
+    color: $color-l-grey;
+    font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  &__brand-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  &__logo-list {
+    display: flex;
+    align-items: center;
+    gap: 41px;
+    flex-wrap: wrap;
+  }
+
+  &__logo {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 16px;
-  }
-  
-  &__author-image {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-  
-  &__author-info {
-    text-align: left;
-  }
-  
-  &__author-name {
-    font-weight: 600;
-    margin-bottom: 4px;
+    height: 48px;
+    
+    img, svg {
+      height: 100%;
+      width: auto;
+      max-width: 100%;
+      object-fit: contain;
+    }
   }
 
-  &__author-title {
-    font-size: 14px;
-    opacity: 0.7;
-  }
-  
-  &__clients {
-    text-align: center;
-  }
-  
-  &__clients-title {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 32px;
-  }
-
-  &__logos {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
+  &__cta {
+    display: inline-flex;
     align-items: center;
-    justify-items: center;
+    align-self: flex-start;
   }
-  
-  &__logo {
-    height: 40px;
-    width: auto;
-    opacity: 0.7;
-    transition: opacity 0.3s ease;
-    
-    &:hover {
-      opacity: 1;
-    }
-  }
-  
-  // Tablet and up
-  @media (min-width: 768px) {
-    padding: 96px 0;
 
-    &__content {
-      gap: 64px;
-    }
-
-    &__title {
-      font-size: 40px;
-    }
-
-    &__subtitle {
-      font-size: 20px;
-    }
-
-    &__quote blockquote {
-      font-size: 22px;
-    }
-
-    &__logos {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 48px;
-    }
-    
-    &__logo {
-      height: 50px;
-    }
-  }
-  
-  // Desktop and up
-  @media (min-width: 1024px) {
+  // Desktop layout (768px and up)
+  @media (min-width: $md) {
     &__content {
       flex-direction: row;
-      align-items: center;
-      gap: 96px;
+      align-items: flex-start;
+      gap: 78px;
     }
 
-    &__text {
-      text-align: left;
-      flex: 1;
-    }
-
-    &__clients {
-      flex: 1;
-      text-align: left;
-    }
-
-    &__logos {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 32px;
-      justify-items: start;
-    }
-    
-    &__quote {
+    &__image-wrapper {
+      flex-shrink: 0;
+      width: 326px;
+      max-width: none;
       margin: 0;
     }
-    
-    &__author {
-      justify-content: flex-start;
+
+    &__text-wrapper {
+      flex: 1;
+      gap: 32px;
+    }
+
+    &__brand-bar {
+      flex-direction: row;
+      align-items: center;
+      gap: 32px;
+    }
+
+    &__logo-list {
+      flex: 1;
+      flex-wrap: nowrap;
+      gap: 32px;
+      justify-content: space-between;
+    }
+
+    &__cta {
+      flex-shrink: 0;
+      align-self: auto;
     }
   }
 }
