@@ -16,29 +16,37 @@ export function initBlogPreview() {
     return;
   }
 
-  // Initialize Swiper for mobile only
+  // Initialize Swiper for both mobile and desktop
   const swiper = new Swiper('.blog-preview__list', {
     // Slider settings
-    slidesPerView: 1,
+    slidesPerView: 'auto',
     spaceBetween: 17,
-    centeredSlides: true,
+    centeredSlides: false,
     loop: false,
     speed: 600,
-    
+
     // Responsive breakpoints
     breakpoints: {
-      // When window width is >= 768px, destroy the swiper
+      // Mobile: 1 slide visible, centered
+      0: {
+        slidesPerView: 1,
+        centeredSlides: true,
+        spaceBetween: 17,
+      },
+      // Desktop: auto slides (show all available), not centered
       768: {
-        enabled: false,
+        slidesPerView: 'auto',
+        centeredSlides: false,
+        spaceBetween: 24,
       },
     },
-    
+
     // Keyboard control
     keyboard: {
       enabled: true,
       onlyInViewport: true,
     },
-    
+
     // Accessibility
     a11y: {
       enabled: true,

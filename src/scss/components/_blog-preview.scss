@@ -48,7 +48,7 @@
     .swiper-wrapper {
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       gap: 24px;
     }
 
@@ -117,23 +117,6 @@
 
     &__header {
       margin-bottom: 0;
-    }
-
-    // Desktop: disable swiper, show as grid
-    &__list {
-      .swiper-wrapper {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 24px;
-        justify-content: center;
-        align-items: flex-start;
-      }
-
-      .swiper-slide {
-        width: 100%;
-        max-width: none;
-        margin: 0;
-      }
     }
 
     &__card {
