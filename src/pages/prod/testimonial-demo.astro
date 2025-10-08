@@ -1,0 +1,36 @@
+---
+import ProdLayout from "../../layouts/ProdLayout.astro";
+import Testimonial from "../../components/prod/Testimonial.astro";
+
+const logos = [
+  { src: '/images/clients/logo1.svg', alt: 'Client logo 1' },
+  { src: '/images/clients/logo2.svg', alt: 'Client logo 2' },
+  { src: '/images/clients/logo3.svg', alt: 'Client logo 3' },
+  { src: '/images/clients/logo4.svg', alt: 'Client logo 4' },
+  { src: '/images/clients/logo5.svg', alt: 'Client logo 5' },
+  { src: '/images/clients/logo6.svg', alt: 'Client logo 6' },
+];
+---
+
+<ProdLayout title="Testimonial Demo - Astro Brand Starter">
+  <Testimonial 
+    quote="Maecenas dignissim justo eget nulla rutrum molestie. Maecenas lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin eu enim metus. Vivamus sed libero ornare, tristique quam in, gravida enim. Nullam ut molestie arcu, at hendrerit elit. Morbi laoreet elit at ligula molestie, nec molestie mi blandit. Suspendisse cursus tellus sed augue ultrices, quis tristique nulla sodales. Suspendisse eget lorem eu turpis vestibulum pretium. Suspendisse potenti. Quisque malesuada enim sapien, vitae placerat ante feugiat eget. Quisque vulputate odio neque, eget efficitur libero condimentum id. Curabitur id nibh id sem dignissim finibus ac sit amet magna."
+    authorName="Tim Smith"
+    authorOrg="British Dragon Boat Racing Association"
+    imageSrc="https://api.builder.io/api/v1/image/assets/TEMP/4231daed1139391896dddf6e004b90f1f9d65ed8"
+    ctaText="Meet all customers"
+    ctaLink="#customers"
+    logos={logos}
+  />
+
+  <section class="page-sec">
+    <div class="container">
+      <div class="sec">
+        <div class="sec__content" style="text-align: center; padding: 40px 0;">
+          <a href="/prod/design-system" class="btn btn--primary">Back to Design System</a>
+          <a href="/" class="btn btn--secondary" style="margin-left: 16px;">Back to Home</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</ProdLayout>
