@@ -1,0 +1,78 @@
+---
+import ProdLayout from "../../layouts/ProdLayout.astro";
+import SplitSection from "../../components/prod/SplitSection.astro";
+---
+
+<ProdLayout title="Split Section Demo - Astro Brand Starter">
+  
+  <!-- Image Left -->
+  <SplitSection 
+    title="The unseen of spending three years at Pixelgrade"
+    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo ipsum. Sed accumsan quam vitae est varius fringilla. Pellentesque placerat vestibulum lorem sed porta. Nullam mattis tristique iaculis. Nullam pulvinar sit amet risus pretium auctor. Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec elementum pulvinar odio."
+    image="/images/unlock/unlock.png"
+    imageAlt="Team collaboration illustration"
+    buttonText="Learn More"
+    buttonLink="#learn-more"
+    imagePosition="left"
+  />
+
+  <!-- Image Right -->
+  <SplitSection 
+    title="How to design your site footer like we did"
+    description="Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor, augue nec tincidunt molestie, massa nunc varius arcu, at scelerisque elit erat a magna. Donec quis erat at libero ultrices mollis. In hac habitasse platea dictumst. Vivamus vehicula leo dui, at porta nisi facilisis finibus. In euismod augue vitae nisi ultricies, non aliquet urna tincidunt. Integer in nisi eget nulla commodo faucibus efficitur quis massa. Praesent felis est, finibus et nisi ac, hendrerit venenatis libero. Donec consectetur faucibus ipsum id gravida."
+    image="/images/unlock/unlock.png"
+    imageAlt="Design process illustration"
+    buttonText="Learn More"
+    buttonLink="#design"
+    imagePosition="right"
+  />
+  
+  <section class="page-sec">
+    <div class="container">
+      <div class="demo-info">
+        <h2>Split Section Component</h2>
+        <p class="body-1">This reusable split section component features:</p>
+        <ul class="body-2">
+          <li>💻 Desktop: Side-by-side layout (image & content)</li>
+          <li>📱 Mobile: Stacked layout (image on top, content below)</li>
+          <li>🔄 Flexible image position (left or right)</li>
+          <li>📝 Configurable title, description, button text & link</li>
+          <li>🎨 Fully responsive with modern CSS Grid & Flexbox</li>
+          <li>✨ Centered text on mobile, left-aligned on desktop</li>
+        </ul>
+        <div style="margin-top: 32px;">
+          <a href="/" class="btn btn--primary">Back to Home</a>
+          <a href="/prod/design-system" class="btn btn--primary" style="margin-left: 16px;">Design System</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</ProdLayout>
+
+<style lang="scss">
+  @use "../../scss/utils/variables" as *;
+
+  .demo-info {
+    padding: 60px 0;
+    max-width: 800px;
+    margin: 0 auto;
+
+    h2 {
+      margin-bottom: 24px;
+    }
+
+    p {
+      margin-bottom: 24px;
+      color: $color-grey;
+    }
+
+    ul {
+      margin-left: 24px;
+      
+      li {
+        margin-bottom: 12px;
+        color: $color-d-grey;
+      }
+    }
+  }
+</style>

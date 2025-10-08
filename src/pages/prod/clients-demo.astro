@@ -1,0 +1,56 @@
+---
+import ProdLayout from "../../layouts/ProdLayout.astro";
+import Clients from "../../components/prod/Clients.astro";
+---
+
+<ProdLayout title="Clients Component Demo - Astro Brand Starter">
+  <Clients />
+  
+  <section class="page-sec">
+    <div class="container">
+      <div class="demo-info">
+        <h2>Clients Component</h2>
+        <p class="body-1">This clients section showcases company logos with:</p>
+        <ul class="body-2">
+          <li>📱 Mobile: Horizontal auto-scrolling slider with Swiper</li>
+          <li>💻 Desktop: Grid layout with centered logos</li>
+          <li>🎯 7 client logos from Fortune 500+ companies</li>
+          <li>🔄 Auto-play on mobile (2-second intervals)</li>
+          <li>✨ Smooth transitions and hover effects</li>
+        </ul>
+        <div style="margin-top: 32px;">
+          <a href="/" class="btn btn--primary">Back to Home</a>
+          <a href="/prod/design-system" class="btn btn--primary" style="margin-left: 16px;">Design System</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</ProdLayout>
+
+<style lang="scss">
+  @use "../../scss/utils/variables" as *;
+
+  .demo-info {
+    padding: 60px 0;
+    max-width: 800px;
+    margin: 0 auto;
+
+    h2 {
+      margin-bottom: 24px;
+    }
+
+    p {
+      margin-bottom: 24px;
+      color: $color-grey;
+    }
+
+    ul {
+      margin-left: 24px;
+      
+      li {
+        margin-bottom: 12px;
+        color: $color-d-grey;
+      }
+    }
+  }
+</style>

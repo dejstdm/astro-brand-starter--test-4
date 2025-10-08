@@ -1,0 +1,178 @@
+// ==========================================================================
+// Community Features Component
+// ==========================================================================
+@use "../utils/variables" as *;
+
+.community-features {
+  padding: 40px 0;
+  background-color: $color-white;
+
+  @media (min-width: $md) {
+    padding: 40px 0;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  // Header
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+    margin-bottom: 16px;
+    max-width: 542px;
+  }
+
+  &__title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 36px;
+    color: $color-d-grey;
+    margin: 0;
+
+    @media (min-width: $md) {
+      font-size: 36px;
+      line-height: 44px;
+    }
+  }
+
+  &__subtitle {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $color-grey;
+    margin: 0;
+  }
+
+  // Desktop Card Grid
+  &__card-list {
+    display: none;
+    width: 100%;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 24px;
+    max-width: 1152px;
+
+    @media (min-width: $md) {
+      display: flex;
+    }
+  }
+
+  // Mobile Slider
+  &__slider {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 40px;
+
+    @media (min-width: $md) {
+      display: none;
+    }
+
+    .swiper-wrapper {
+      display: flex;
+      align-items: stretch;
+    }
+
+    .swiper-slide {
+      height: auto;
+      display: flex;
+    }
+  }
+
+  // Card Styles
+  &__card {
+    display: flex;
+    width: 100%;
+    max-width: 299px;
+    padding: 24px 32px;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    background-color: $color-white;
+    box-shadow: 0 2px 4px 0 rgba(171, 190, 209, 0.2);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+    @media (max-width: 767px) {
+      margin: 0 auto;
+    }
+
+    &:hover {
+      box-shadow: 0 4px 12px 0 rgba(171, 190, 209, 0.3);
+      transform: translateY(-4px);
+    }
+  }
+
+  &__card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+  }
+
+  &__icon {
+    width: 65px;
+    height: 56px;
+    flex-shrink: 0;
+  }
+
+  &__card-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 36px;
+    color: $color-d-grey;
+    text-align: center;
+    margin: 0;
+  }
+
+  &__card-description {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: $color-grey;
+    text-align: center;
+    margin: 0;
+  }
+
+  // Custom pagination
+  &__pagination {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 24px;
+    bottom: auto !important;
+  }
+
+  :global(.swiper-pagination-bullet) {
+    width: 10px;
+    height: 10px;
+    background-color: $color-primary;
+    opacity: 0.3;
+    border-radius: 50%;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+    margin: 0 9px !important;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  :global(.swiper-pagination-bullet-active) {
+    opacity: 1;
+  }
+}

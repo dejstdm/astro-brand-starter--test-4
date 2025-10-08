@@ -1,6 +1,7 @@
 // ==========================================================================
-// Typography System
+// Typography System (Based on Figma Design)
 // ==========================================================================
+@use "../utils/variables" as *;
 
 // ==========================================================================
 // Base Typography
@@ -17,7 +18,7 @@ html {
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-weight: 400;
-  color: var(--color-text-primary);
+  color: $color-black;
   line-height: 1.5;
 }
 
@@ -27,74 +28,52 @@ body {
 
 .h1, h1 {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-size: 48px;
-  font-weight: 600;
-  line-height: 57px;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 76px;
   margin: 0 0 16px 0;
-  
-  @media (min-width: 768px) {
-    font-size: 64px;
-    line-height: 76px;
-  }
+  color: $color-black;
 }
 
 .h2, h2 {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 38px;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 44px;
   margin: 0 0 16px 0;
-  
-  @media (min-width: 768px) {
-    font-size: 36px;
-    line-height: 44px;
-  }
+  color: $color-black;
 }
 
 .h3, h3 {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 700;
-  line-height: 32px;
+  line-height: 36px;
   margin: 0 0 16px 0;
-  
-  @media (min-width: 768px) {
-    font-size: 28px;
-    line-height: 36px;
-  }
+  color: $color-black;
 }
 
 .h4, h4 {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 25px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
   margin: 0 0 16px 0;
-  
-  @media (min-width: 768px) {
-    font-size: 20px;
-    line-height: 28px;
-  }
+  color: $color-black;
 }
 
 // ==========================================================================
-// Body Text
+// Body Text - Regular Weight
 // ==========================================================================
 
-.body-1 {
+.body-1,
+p {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 28px;
   margin: 0 0 16px 0;
-}
-
-.body-1-medium {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 28px;
-  margin: 0 0 16px 0;
+  color: $color-black;
 }
 
 .body-2 {
@@ -103,14 +82,7 @@ body {
   font-weight: 400;
   line-height: 24px;
   margin: 0 0 16px 0;
-}
-
-.body-2-medium {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 24px;
-  margin: 0 0 16px 0;
+  color: $color-black;
 }
 
 .body-3 {
@@ -119,14 +91,7 @@ body {
   font-weight: 400;
   line-height: 20px;
   margin: 0 0 16px 0;
-}
-
-.body-3-medium {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-  margin: 0 0 16px 0;
+  color: $color-black;
 }
 
 .body-4 {
@@ -135,6 +100,38 @@ body {
   font-weight: 400;
   line-height: 16px;
   margin: 0 0 16px 0;
+  color: $color-black;
+}
+
+// ==========================================================================
+// Body Text - Medium Weight
+// ==========================================================================
+
+.body-1-medium {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+  margin: 0 0 16px 0;
+  color: $color-black;
+}
+
+.body-2-medium {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  margin: 0 0 16px 0;
+  color: $color-black;
+}
+
+.body-3-medium {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin: 0 0 16px 0;
+  color: $color-black;
 }
 
 .body-4-medium {
@@ -143,6 +140,7 @@ body {
   font-weight: 500;
   line-height: 16px;
   margin: 0 0 16px 0;
+  color: $color-black;
 }
 
 // ==========================================================================
@@ -150,35 +148,35 @@ body {
 // ==========================================================================
 
 .text-primary {
-  color: var(--color-primary);
+  color: $color-primary;
 }
 
 .text-secondary {
-  color: var(--color-text-secondary);
+  color: $color-secondary;
 }
 
-.text-muted {
-  color: var(--color-text-muted);
+.text-grey {
+  color: $color-grey;
 }
 
-.text-dark {
-  color: var(--color-text-dark);
+.text-l-grey {
+  color: $color-l-grey;
 }
 
 .text-info {
-  color: var(--color-info);
+  color: $color-info;
 }
 
 .text-success {
-  color: var(--color-success);
+  color: $color-success;
 }
 
 .text-warning {
-  color: var(--color-warning);
+  color: $color-warning;
 }
 
 .text-error {
-  color: var(--color-error);
+  color: $color-error;
 }
 
 .text-center {
@@ -191,8 +189,4 @@ body {
 
 .text-right {
   text-align: right;
-}
-
-.tracking-tight {
-  letter-spacing: 0.1px;
 }

@@ -1,0 +1,68 @@
+---
+const stats = [
+  {
+    icon: '/images/achievements/Achievements-1.png',
+    number: '2,245,341',
+    label: 'Members'
+  },
+  {
+    icon: '/images/achievements/Achievements-2.png',
+    number: '46,328',
+    label: 'Clubs'
+  },
+  {
+    icon: '/images/achievements/Achievements-3.png',
+    number: '828,867',
+    label: 'Event Bookings'
+  },
+  {
+    icon: '/images/achievements/Achievements-4.png',
+    number: '1,926,436',
+    label: 'Payments'
+  }
+];
+---
+
+<section class="achievements page-sec">
+  <div class="container">
+    <div class="achievements__inner">
+      
+      <!-- Header -->
+      <div class="achievements__header">
+        <h2 class="achievements__title">
+          Helping a local <span class="achievements__title-highlight">business reinvent itself</span>
+        </h2>
+        <p class="achievements__subtitle">
+          We reached here with our hard work and dedication
+        </p>
+      </div>
+
+      <!-- Stats Grid -->
+      <div class="achievements__stats">
+        <div class="achievements__row">
+          {stats.slice(0, 2).map((stat) => (
+            <div class="achievements__stat">
+              <img src={stat.icon} alt={`${stat.label} icon`} class="achievements__icon" />
+              <div class="achievements__stat-text">
+                <div class="achievements__number">{stat.number}</div>
+                <div class="achievements__label">{stat.label}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div class="achievements__row">
+          {stats.slice(2, 4).map((stat) => (
+            <div class="achievements__stat">
+              <img src={stat.icon} alt={`${stat.label} icon`} class="achievements__icon" />
+              <div class="achievements__stat-text">
+                <div class="achievements__number">{stat.number}</div>
+                <div class="achievements__label">{stat.label}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

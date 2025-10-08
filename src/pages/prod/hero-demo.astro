@@ -1,0 +1,57 @@
+---
+import ProdLayout from "../../layouts/ProdLayout.astro";
+import HeroSlider from "../../components/prod/HeroSlider.astro";
+---
+
+<ProdLayout title="Hero Slider Demo - Astro Brand Starter">
+  <HeroSlider />
+  
+  <section class="page-sec">
+    <div class="container">
+      <div class="demo-info">
+        <h2>Hero Slider Component</h2>
+        <p class="body-1">This hero slider uses Swiper.js with the following features:</p>
+        <ul class="body-2">
+          <li>✨ Fade transition effect</li>
+          <li>🔄 Auto-play with 5-second intervals</li>
+          <li>📱 Fully responsive (mobile & desktop)</li>
+          <li>🎯 Custom pagination dots (active state in green)</li>
+          <li>⌨️ Keyboard navigation support</li>
+          <li>♿ Accessibility features included</li>
+          <li>⏸️ Pause on hover</li>
+        </ul>
+        <div style="margin-top: 32px;">
+          <a href="/" class="btn btn--primary">Back to Home</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</ProdLayout>
+
+<style lang="scss">
+  @use "../../scss/utils/variables" as *;
+
+  .demo-info {
+    padding: 60px 0;
+    max-width: 800px;
+    margin: 0 auto;
+
+    h2 {
+      margin-bottom: 24px;
+    }
+
+    p {
+      margin-bottom: 24px;
+      color: $color-grey;
+    }
+
+    ul {
+      margin-left: 24px;
+      
+      li {
+        margin-bottom: 12px;
+        color: $color-d-grey;
+      }
+    }
+  }
+</style>

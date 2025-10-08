@@ -1,8 +1,61 @@
 ---
 import ProdLayout from "../../layouts/ProdLayout.astro";
-
+import HeroSlider from "../../components/prod/HeroSlider.astro";
+import Clients from "../../components/prod/Clients.astro";
+import CommunityFeatures from "../../components/prod/CommunityFeatures.astro";
+import SplitSection from "../../components/prod/SplitSection.astro";
+import Achievements from "../../components/prod/Achievements.astro";
 ---
-<ProdLayout>
-  
+
+<ProdLayout title="Astro Brand Starter - Home">
+  <HeroSlider />
+  <Clients />
+  <CommunityFeatures />
+  <SplitSection
+    title="The unseen of spending three years at Pixelgrade"
+    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo ipsum. Sed accumsan quam vitae est varius fringilla. Pellentesque placerat vestibulum lorem sed porta. Nullam mattis tristique iaculis. Nullam pulvinar sit amet risus pretium auctor. Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec elementum pulvinar odio."
+    image="/images/unlock/unlock.png"
+    imageAlt="Team collaboration illustration"
+    buttonText="Learn More"
+    buttonLink="#learn-more"
+    imagePosition="left"
+  />
+  <Achievements />
+
+  <section class="page-sec page-sec--homepage">
+    <div class="container">
+      <div class="homepage sec">
+        <div class="homepage__content sec__content">
+          <h1>Astro Brand Starter</h1>
+          <p class="body-1">Welcome to the production-ready Astro brand starter.</p>
+
+          <div class="homepage__links">
+            <a href="/prod/design-system" class="btn btn--primary">View Design System</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </ProdLayout>
 
+<style lang="scss">
+  @use "../../scss/utils/variables" as *;
+
+  .homepage {
+    padding: 80px 0;
+    text-align: center;
+
+    &__links {
+      margin-top: 40px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: $color-grey;
+      margin-bottom: 0;
+    }
+  }
+</style>

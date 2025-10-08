@@ -1,0 +1,70 @@
+---
+import ProdLayout from "../../layouts/ProdLayout.astro";
+import Achievements from "../../components/prod/Achievements.astro";
+---
+
+<ProdLayout title="Achievements Demo - Astro Brand Starter">
+  <Achievements />
+  
+  <section class="page-sec">
+    <div class="container">
+      <div class="demo-info">
+        <h2>Achievements Component</h2>
+        <p class="body-1">This achievements section showcases key metrics with:</p>
+        <ul class="body-2">
+          <li>💻 Desktop: Side-by-side layout (header left, stats grid right)</li>
+          <li>📱 Mobile: Stacked layout (header top, stats below)</li>
+          <li>📊 4 key statistics with icons</li>
+          <li>🎨 2x2 grid on desktop, stacked columns on mobile</li>
+          <li>✨ Green accent color for highlighted text</li>
+          <li>🎯 Light grey background (#F5F7FA)</li>
+        </ul>
+        <h3>Statistics Displayed:</h3>
+        <ul class="body-2">
+          <li>2,245,341 Members</li>
+          <li>46,328 Clubs</li>
+          <li>828,867 Event Bookings</li>
+          <li>1,926,436 Payments</li>
+        </ul>
+        <div style="margin-top: 32px;">
+          <a href="/" class="btn btn--primary">Back to Home</a>
+          <a href="/prod/design-system" class="btn btn--primary" style="margin-left: 16px;">Design System</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</ProdLayout>
+
+<style lang="scss">
+  @use "../../scss/utils/variables" as *;
+
+  .demo-info {
+    padding: 60px 0;
+    max-width: 800px;
+    margin: 0 auto;
+
+    h2 {
+      margin-bottom: 24px;
+    }
+
+    h3 {
+      margin-top: 32px;
+      margin-bottom: 16px;
+    }
+
+    p {
+      margin-bottom: 24px;
+      color: $color-grey;
+    }
+
+    ul {
+      margin-left: 24px;
+      margin-bottom: 24px;
+      
+      li {
+        margin-bottom: 12px;
+        color: $color-d-grey;
+      }
+    }
+  }
+</style>

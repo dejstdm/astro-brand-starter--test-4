@@ -1,0 +1,258 @@
+// ==========================================================================
+// Main Navigation Component
+// ==========================================================================
+@use "../utils/variables" as *;
+
+.main-nav {
+  background-color: $color-white;
+  position: relative;
+  z-index: 100;
+  padding: 20px 0;
+
+  @media (min-width: $md) {
+    padding: 16px 0;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  // Logo
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    flex-shrink: 0;
+
+    @media (max-width: 767px) {
+      gap: 6px;
+    }
+  }
+
+  &__logo-icon {
+    width: 28px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+
+  &__logo-text {
+    width: 90px;
+    height: 17px;
+    flex-shrink: 0;
+
+    @media (max-width: 767px) {
+      width: 72px;
+      height: 14px;
+    }
+  }
+
+  // Desktop Menu
+  &__menu {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 50px;
+    align-items: center;
+
+    @media (min-width: $md) {
+      display: flex;
+    }
+
+    li {
+      margin: 0;
+    }
+  }
+
+  &__link {
+    color: $color-black;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $color-primary;
+    }
+
+    &--active {
+      font-weight: 500;
+    }
+  }
+
+  // Desktop Actions
+  &__actions {
+    display: none;
+    align-items: center;
+    gap: 14px;
+
+    @media (min-width: $md) {
+      display: flex;
+    }
+  }
+
+  &__btn {
+    display: inline-flex;
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+
+    &--secondary {
+      color: $color-primary;
+      background-color: transparent;
+
+      &:hover {
+        background-color: $color-tint-5;
+      }
+    }
+  }
+
+  // Mobile Toggle Button (Hamburger)
+  &__toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 101;
+
+    @media (min-width: $md) {
+      display: none;
+    }
+  }
+
+  &__toggle-line {
+    width: 16px;
+    height: 1.5px;
+    background-color: $color-grey;
+    transition: all 0.3s ease;
+    position: absolute;
+
+    &:nth-child(1) {
+      transform: translateY(-6px);
+    }
+
+    &:nth-child(2) {
+      transform: translateY(0);
+    }
+
+    &:nth-child(3) {
+      transform: translateY(6px);
+    }
+  }
+
+  // Animated hamburger when menu is open
+  &__toggle[aria-expanded="true"] {
+    .main-nav__toggle-line {
+      &:nth-child(1) {
+        transform: translateY(0) rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+        transform: translateX(-10px);
+      }
+
+      &:nth-child(3) {
+        transform: translateY(0) rotate(-45deg);
+      }
+    }
+  }
+
+  // Mobile Menu
+  &__mobile-menu {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background-color: $color-white;
+    border-top: 1px solid $color-silver;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    max-height: calc(100vh - 64px);
+    overflow-y: auto;
+    z-index: 99;
+
+    @media (min-width: $md) {
+      display: none;
+    }
+
+    &.is-open {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__mobile-list {
+    list-style: none;
+    margin: 0;
+    padding: 24px 0;
+    border-bottom: 1px solid $color-silver;
+
+    li {
+      margin: 0;
+    }
+  }
+
+  &__mobile-link {
+    display: block;
+    padding: 16px 0;
+    color: $color-black;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  &__mobile-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px 0;
+
+    .main-nav__btn,
+    .btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}
+
+// Add smooth scrolling and prevent body scroll when menu is open
+body.nav-open {
+  overflow: hidden;
+
+  @media (min-width: $md) {
+    overflow: visible;
+  }
+}

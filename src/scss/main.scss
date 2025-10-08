@@ -14,10 +14,13 @@
 @use "./layout/section";
 
 // COMPONENTS
+@use "components/main-nav";
 @use "components/buttons";
-@use "components/achievements";
+@use "components/hero-slider";
 @use "components/clients";
+@use "components/community-features";
+@use "components/split-section";
+@use "components/achievements";
 @use "components/hero";
 @use "components/hero-v2";
 @use "components/testimonial";
-
