@@ -6,6 +6,7 @@ import CommunityFeatures from "../../components/prod/CommunityFeatures.astro";
 import SplitSection from "../../components/prod/SplitSection.astro";
 import Achievements from "../../components/prod/Achievements.astro";
 import Testimonial from "../../components/prod/Testimonial.astro";
+import BlogPreview from "../../components/prod/BlogPreview.astro";
 
 const testimonialLogos = [
   { src: '/images/clients/logo1.svg', alt: 'Client logo 1' },
@@ -14,6 +15,27 @@ const testimonialLogos = [
   { src: '/images/clients/logo4.svg', alt: 'Client logo 4' },
   { src: '/images/clients/logo5.svg', alt: 'Client logo 5' },
   { src: '/images/clients/logo6.svg', alt: 'Client logo 6' },
+];
+
+const blogCards = [
+  {
+    image: "https://api.builder.io/api/v1/image/assets/TEMP/a8dedde3c27ec5ec6a4f17e9cf6fdc96c66228bd",
+    title: "Creating Streamlined Safeguarding Processes with OneRen",
+    link: "#blog-1",
+    imageAlt: "Team member working on laptop"
+  },
+  {
+    image: "https://api.builder.io/api/v1/image/assets/TEMP/4f8e8c5dfb2d0fa8e9199b25302a4175ee046b30",
+    title: "What are your safeguarding responsibilities and how can you manage them?",
+    link: "#blog-2",
+    imageAlt: "Person working on laptop with coffee"
+  },
+  {
+    image: "https://api.builder.io/api/v1/image/assets/TEMP/77e832aa004656cddff1d4f686a81f9da2239530",
+    title: "Revamping the Membership Model with Triathlon Australia",
+    link: "#blog-3",
+    imageAlt: "Laptop with yellow screen and plant"
+  }
 ];
 ---
 
@@ -39,6 +61,11 @@ const testimonialLogos = [
     ctaText="Meet all customers"
     ctaLink="#customers"
     logos={testimonialLogos}
+  />
+  <BlogPreview
+    title="Caring is the new marketing"
+    subtitle="The Nexcent blog is the best place to read about the latest membership insights, trends and more. See who's joining the community, read about how our community are increasing their membership income and lot's more."
+    cards={blogCards}
   />
 
   <section class="page-sec page-sec--homepage">

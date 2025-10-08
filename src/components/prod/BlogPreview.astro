@@ -1,0 +1,63 @@
+---
+const {
+  title = "Caring is the new marketing",
+  subtitle = "The Nexcent blog is the best place to read about the latest membership insights, trends and more. See who's joining the community, read about how our community are increasing their membership income and lot's more.",
+  cards = []
+} = Astro.props;
+---
+
+<section class="page-sec page-sec--blog-preview">
+  <div class="container">
+    <div class="blog-preview sec">
+      <div class="blog-preview__content sec__content">
+        
+        <!-- Header -->
+        <div class="blog-preview__header">
+          <h2 class="blog-preview__title">{title}</h2>
+          <p class="blog-preview__subtitle">{subtitle}</p>
+        </div>
+
+        <!-- Desktop Grid -->
+        <div class="blog-preview__grid">
+          {cards.map((card) => (
+            <article class="blog-preview__card">
+              <img src={card.image} alt={card.imageAlt || card.title} class="blog-preview__image" />
+              <div class="blog-preview__card-content">
+                <h3 class="blog-preview__card-title">{card.title}</h3>
+                <a href={card.link} class="btn btn--tertiary blog-preview__card-link">
+                  <span>Readmore</span>
+                  <svg class="btn__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 16L19.2929 12.7071C19.6834 12.3166 19.6834 11.6834 19.2929 11.2929L16 8M19 12L5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  </svg>
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <!-- Mobile Slider -->
+        <div class="swiper blog-preview__slider">
+          <div class="swiper-wrapper">
+            {cards.map((card) => (
+              <div class="swiper-slide">
+                <article class="blog-preview__card">
+                  <img src={card.image} alt={card.imageAlt || card.title} class="blog-preview__image" />
+                  <div class="blog-preview__card-content">
+                    <h3 class="blog-preview__card-title">{card.title}</h3>
+                    <a href={card.link} class="btn btn--tertiary blog-preview__card-link">
+                      <span>Readmore</span>
+                      <svg class="btn__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 16L19.2929 12.7071C19.6834 12.3166 19.6834 11.6834 19.2929 11.2929L16 8M19 12L5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                      </svg>
+                    </a>
+                  </div>
+                </article>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
