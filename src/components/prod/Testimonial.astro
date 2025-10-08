@@ -1,0 +1,59 @@
+---
+const { 
+  quote = "Maecenas dignissim justo eget nulla rutrum molestie. Maecenas lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin eu enim metus. Vivamus sed libero ornare, tristique quam in, gravida enim. Nullam ut molestie arcu, at hendrerit elit. Morbi laoreet elit at ligula molestie, nec molestie mi blandit. Suspendisse cursus tellus sed augue ultrices, quis tristique nulla sodales. Suspendisse eget lorem eu turpis vestibulum pretium. Suspendisse potenti. Quisque malesuada enim sapien, vitae placerat ante feugiat eget. Quisque vulputate odio neque, eget efficitur libero condimentum id. Curabitur id nibh id sem dignissim finibus ac sit amet magna.",
+  authorName = "Tim Smith",
+  authorOrg = "British Dragon Boat Racing Association",
+  imageSrc = "https://api.builder.io/api/v1/image/assets/TEMP/4231daed1139391896dddf6e004b90f1f9d65ed8",
+  ctaText = "Meet all customers",
+  ctaLink = "#customers",
+  logos = []
+} = Astro.props;
+---
+
+<section class="page-sec page-sec--testimonial">
+  <div class="container">
+    <div class="testimonial sec">
+      <div class="testimonial__content sec__content">
+        
+        <div class="testimonial__image-wrapper">
+          <img src={imageSrc} alt="Customer testimonial" class="testimonial__image" />
+        </div>
+
+        <div class="testimonial__text-wrapper">
+          <div class="testimonial__text">
+            <p class="testimonial__quote">{quote}</p>
+            
+            <div class="testimonial__author-group">
+              <div class="testimonial__author">{authorName}</div>
+              <div class="testimonial__author-org">{authorOrg}</div>
+            </div>
+          </div>
+
+          <div class="testimonial__brand-bar">
+            {logos.length > 0 && (
+              <div class="testimonial__logo-list">
+                {logos.map((logo) => (
+                  <div class="testimonial__logo">
+                    {logo.svg ? (
+                      <Fragment set:html={logo.svg} />
+                    ) : (
+                      <img src={logo.src} alt={logo.alt || "Client logo"} />
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
+            
+            <a href={ctaLink} class="btn btn--tertiary testimonial__cta">
+              <span>{ctaText}</span>
+              <svg class="btn__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 16L19.2929 12.7071C19.6834 12.3166 19.6834 11.6834 19.2929 11.2929L16 8M19 12L5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

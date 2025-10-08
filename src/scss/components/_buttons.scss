@@ -54,10 +54,51 @@
   flex-shrink: 0;
 }
 
+// Secondary Button
+.btn--secondary {
+  background-color: transparent;
+  color: $color-primary;
+  border: 1px solid $color-primary;
+
+  &:hover:not(:disabled) {
+    background-color: $color-tint-5;
+  }
+
+  &:active:not(:disabled) {
+    background-color: $color-tint-4;
+  }
+}
+
+// Tertiary Button (Link style)
+.btn--tertiary {
+  background-color: transparent;
+  color: $color-primary;
+  padding: 8px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+
+  &:hover:not(:disabled) {
+    color: $color-shade-1;
+
+    .btn__icon {
+      transform: translateX(4px);
+    }
+  }
+
+  &:active:not(:disabled) {
+    color: $color-shade-2;
+  }
+
+  .btn__icon {
+    transition: transform 0.2s ease-in-out;
+  }
+}
+
 // Link button variant
 a.btn {
   text-decoration: none;
-  
+
   &:hover {
     text-decoration: none;
   }
