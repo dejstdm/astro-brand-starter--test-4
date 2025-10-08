@@ -10,16 +10,15 @@
     flex-direction: column;
     gap: 16px;
   }
-
+  
   &__header {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 8px;
     text-align: center;
-    margin-bottom: 16px;
   }
-
+  
   &__title {
     color: $color-d-grey;
     font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif;
@@ -27,9 +26,8 @@
     font-weight: 700;
     line-height: 44px;
     margin: 0;
-    max-width: 487px;
   }
-
+  
   &__subtitle {
     color: $color-grey;
     font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif;
@@ -37,38 +35,37 @@
     font-weight: 400;
     line-height: 24px;
     margin: 0;
-    max-width: 628px;
   }
-
+  
   // Cards List - Swiper container
   &__list {
-    overflow: visible;
+    overflow: hidden;
     width: 100%;
-
+    
     .swiper-wrapper {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 24px;
+      // Don't override Swiper's internal flex/gap - it handles this
     }
-
+    
     .swiper-slide {
       width: auto;
       max-width: 368px;
-      flex-shrink: 0;
+      height: auto;
     }
   }
-
+  
   &__card {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
     width: 100%;
-    max-width: 368px;
+    // max-width: 368px;
     margin: 0 auto;
+    justify-content: space-between;
+    height: 100%;
+    padding-bottom: 30px;
   }
-
+  
   &__image {
     width: 100%;
     height: 286px;
@@ -76,7 +73,7 @@
     object-fit: cover;
     display: block;
   }
-
+  
   &__card-content {
     display: flex;
     flex-direction: column;
@@ -87,12 +84,13 @@
     background: $color-silver;
     box-shadow: 0 8px 16px 0 rgba(171, 190, 209, 0.40);
     width: calc(100% - 32px);
-    max-width: 317px;
+    height: 170px;
     margin-top: -96px;
     position: relative;
     z-index: 1;
+    justify-content: space-between;
   }
-
+  
   &__card-title {
     color: $color-grey;
     font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif;
@@ -102,23 +100,26 @@
     text-align: center;
     margin: 0;
     width: 100%;
+    
+    // Restrict to 3 lines max
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
-
+  
   &__card-link {
     align-self: stretch;
     justify-content: center;
   }
-
+  
   // Desktop layout (768px and up)
   @media (min-width: $md) {
     &__content {
       gap: 32px;
     }
-
-    &__header {
-      margin-bottom: 0;
-    }
-
+    
     &__card {
       margin: 0;
     }

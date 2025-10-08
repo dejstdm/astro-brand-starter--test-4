@@ -35,7 +35,7 @@ export function initBlogPreview() {
       },
       // Desktop: auto slides (show all available), not centered
       768: {
-        slidesPerView: 'auto',
+        slidesPerView: 3,
         centeredSlides: false,
         spaceBetween: 24,
       },

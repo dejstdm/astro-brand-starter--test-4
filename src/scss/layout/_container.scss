@@ -7,26 +7,23 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: var(--container-padding-x);
+  padding-right: var(--container-padding-x);
   
-  // Mobile: 315px container width
-  // With 20px padding on each side, total space = 355px
-  max-width: 355px;
-  
+  // Mobile: no max-width restriction, uses full available width
   // Desktop: 1152px container width at 1440px viewport
   // Side margins: 144px each side, gutters: 24px each side
   @media (min-width: $md) {
     max-width: calc(1152px + 48px); // 1152px + 24px gutters on each side
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: var(--container-padding-x-md);
+    padding-right: var(--container-padding-x-md);
   }
   
   // Large viewport: maintain 144px side margins
   @media (min-width: 1440px) {
     max-width: calc(1440px - 288px); // 1440px - (144px × 2 side margins)
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: var(--container-padding-x-md);
+    padding-right: var(--container-padding-x-md);
   }
 }
 
@@ -35,21 +32,19 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  
-  max-width: 355px;
+  padding-left: var(--container-padding-x);
+  padding-right: var(--container-padding-x);
   
   @media (min-width: $md) {
     max-width: calc(1228px + 48px); // 1228px + 24px gutters on each side
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: var(--container-padding-x-md);
+    padding-right: var(--container-padding-x-md);
   }
   
   @media (min-width: 1440px) {
     max-width: calc(1440px - 212px); // Approximately 1228px centered
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: var(--container-padding-x-md);
+    padding-right: var(--container-padding-x-md);
   }
 }
 
@@ -58,16 +53,27 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: var(--container-padding-x);
+  padding-right: var(--container-padding-x);
   
   @media (min-width: $md) {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: var(--container-padding-x-md);
+    padding-right: var(--container-padding-x-md);
   }
+}
+
+// Section header container (630px max-width for centered headers)
+.container-sec-header {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding-x);
+  padding-right: var(--container-padding-x);
+  max-width: calc(630px + (var(--container-padding-x) * 2)); // 630px + padding on each side
   
-  @media (min-width: 1440px) {
-    padding-left: 144px;
-    padding-right: 144px;
+  @media (min-width: $md) {
+    max-width: calc(660px + (var(--container-padding-x-md) * 2)); // 630px + padding on each side
+    padding-left: var(--container-padding-x-md);
+    padding-right: var(--container-padding-x-md);
   }
 }

@@ -12,10 +12,10 @@
   padding: 64px 0;
 
   &__header {
-    margin-bottom: 32px;
+    margin-bottom: 30px;
 
     @media (min-width: $lg) {
-      margin-bottom: 0;
+      margin-bottom: 30px;
     }
   }
 
@@ -34,8 +34,23 @@
     line-height: 1.5;
     margin: 0;
   }
+}
 
-  &__content {
-    // Base content wrapper styles
+// ==========================================================================
+// Page Section Wrapper with Background Modifiers
+// ==========================================================================
+
+.page-sec {
+  // Default: no background / transparent
+  background-color: transparent;
+
+  // White background modifier
+  &--bg-white {
+    background-color: $color-white;
+  }
+
+  // Gray/Silver background modifier
+  &--bg-gray {
+    background-color: $color-silver;
   }
 }

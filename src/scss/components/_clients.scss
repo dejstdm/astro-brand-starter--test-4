@@ -5,7 +5,6 @@
 
 .clients {
   padding: 40px 0;
-  background-color: $color-white;
 
   @media (min-width: $md) {
     padding: 40px 0;
@@ -24,7 +23,6 @@
     align-items: center;
     gap: 8px;
     text-align: center;
-    margin-bottom: 16px;
   }
 
   &__title {

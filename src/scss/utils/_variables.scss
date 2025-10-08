@@ -99,4 +99,8 @@ $container-gutter: 24px;
   --color-border: #{$color-grey-blue};
   --color-background: #{$color-white};
   --color-background-light: #{$color-silver};
+
+  // Container Padding (unified across all container types)
+  --container-padding-x: 30px;
+  --container-padding-x-md: 24px;
 }

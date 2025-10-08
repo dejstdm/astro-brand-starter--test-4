@@ -18,19 +18,21 @@ const features = [
 ];
 ---
 
-<section class="community-features page-sec">
-  <div class="container">
-    <div class="community-features__inner">
-      
-      <!-- Header -->
-      <div class="community-features__header">
+<section class="community-features page-sec page-sec--bg-gray">
+  <div class="community-features__inner">
+    
+    <!-- Header -->
+    <div class="container-sec-header">
+      <div class="community-features__header sec__header">
         <h2 class="community-features__title">
           Manage your entire community<br />in a single system
         </h2>
         <p class="community-features__subtitle">Who is Nextcent suitable for?</p>
       </div>
+    </div>
 
-      <!-- Desktop Card Grid -->
+    <!-- Desktop Card Grid -->
+    <div class="container">
       <div class="community-features__card-list">
         {features.map((feature) => (
           <div class="community-features__card">
@@ -46,8 +48,10 @@ const features = [
           </div>
         ))}
       </div>
+    </div>
 
-      <!-- Mobile Slider -->
+    <!-- Mobile Slider -->
+    <div class="container">
       <div class="community-features__slider swiper">
         <div class="swiper-wrapper">
           {features.map((feature) => (
@@ -68,7 +72,7 @@ const features = [
         </div>
         <div class="swiper-pagination community-features__pagination"></div>
       </div>
-
     </div>
+
   </div>
 </section>

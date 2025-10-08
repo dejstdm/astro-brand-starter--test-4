@@ -18,18 +18,33 @@
 ---
 const { variant } = Astro.props;
 ---
-<section class="page-sec page-sec--component-name">
-  <div class="container">
-    <div class="component-name sec">
+<section class="page-sec page-sec--bg-white page-sec--component-name">
+  <div class="component-name sec">
+    
+    <!-- Centered header (if needed) -->
+    <div class="container-sec-header">
+      <div class="component-name__header">
+        <h2 class="component-name__title">Title</h2>
+        <p class="component-name__subtitle">Subtitle</p>
+      </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="container">
       <div class="component-name__content sec__content">
         <!-- component content -->
       </div>
     </div>
+    
   </div>
 </section>
 ```
 
 Replace `component-name` with the kebab-case slug for your component.
+
+**Background Control:** Use `page-sec--bg-white` or `page-sec--bg-gray` modifiers on the `page-sec` wrapper to control section backgrounds. These global modifiers are defined in `src/scss/layout/_section.scss`.
+
+**Container Rule:** NEVER nest containers! Use `.container-sec-header` for centered headers (630px max-width) and `.container` for content. They should be siblings, not nested.
 
 ## Checklist
 - Uses the `page-sec`, `container`, `sec`, and `sec__content` structure.

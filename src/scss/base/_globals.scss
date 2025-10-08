@@ -115,3 +115,12 @@ button {
         outline: none;
     }
 }
+
+// Swiper global settings
+.swiper-pagination-bullet{
+    width: 10px;
+    height: 10px;
+}
+.swiper-pagination-bullet-active{
+background: var(--color-primary);
+}

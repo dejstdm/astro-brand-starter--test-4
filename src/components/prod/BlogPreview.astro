@@ -6,18 +6,20 @@ const {
 } = Astro.props;
 ---
 
-<section class="page-sec page-sec--blog-preview">
-  <div class="container">
-    <div class="blog-preview sec">
-      <div class="blog-preview__content sec__content">
-        
-        <!-- Header -->
-        <div class="blog-preview__header">
-          <h2 class="blog-preview__title">{title}</h2>
-          <p class="blog-preview__subtitle">{subtitle}</p>
-        </div>
+<section class="page-sec page-sec--bg-gray page-sec--blog-preview">
+  <div class="blog-preview sec">
+    
+    <!-- Header -->
+    <div class="container-sec-header">
+      <div class="blog-preview__header sec__header">
+        <h2 class="blog-preview__title">{title}</h2>
+        <p class="blog-preview__subtitle">{subtitle}</p>
+      </div>
+    </div>
 
-        <!-- Cards List (Swiper slider) -->
+    <!-- Cards List (Swiper slider) -->
+    <div class="container">
+      <div class="blog-preview__content sec__content">
         <div class="blog-preview__list swiper">
           <div class="swiper-wrapper">
             {cards.map((card) => (
@@ -38,8 +40,8 @@ const {
             ))}
           </div>
         </div>
-
       </div>
     </div>
+
   </div>
 </section>

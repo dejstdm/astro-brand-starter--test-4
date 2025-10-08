@@ -10,16 +10,19 @@ const logos = [
 ];
 ---
 
-<section class="clients page-sec">
-  <div class="container">
-    <div class="clients__inner">
-      <!-- Header -->
-      <div class="clients__header">
+<section class="clients page-sec page-sec--bg-white">
+  <div class="clients__inner">
+    
+    <!-- Header -->
+    <div class="container-sec-header">
+      <div class="clients__header sec__header">
         <h2 class="clients__title">Our Clients</h2>
         <p class="clients__description">We have been working with some Fortune 500+ clients</p>
       </div>
+    </div>
 
-      <!-- Logo List - Desktop -->
+    <!-- Logo List - Desktop -->
+    <div class="container">
       <div class="clients__logo-list">
         {logos.map((logo) => (
           <div class="clients__logo">
@@ -27,8 +30,10 @@ const logos = [
           </div>
         ))}
       </div>
+    </div>
 
-      <!-- Logo Slider - Mobile -->
+    <!-- Logo Slider - Mobile -->
+    <div class="container">
       <div class="clients__logo-slider swiper">
         <div class="swiper-wrapper">
           {logos.map((logo) => (
@@ -41,5 +46,6 @@ const logos = [
         </div>
       </div>
     </div>
+
   </div>
 </section>

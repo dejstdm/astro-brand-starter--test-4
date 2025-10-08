@@ -13,7 +13,7 @@ src/scss/
 |  |- _normalize.scss     // Normalize baseline
 |  |- _typography.scss    // Typography scale
 |- layout/
-|  |- _container.scss     // Container widths and spacing
+|  |- _container.scss     // Container widths and spacing (NEVER nest containers!)
 |  |- _section.scss       // Section wrappers
 |- components/
 |  |- _achievements.scss
@@ -25,6 +25,9 @@ src/scss/
 |- utils/
 |  |- _variables.scss     // Design tokens and mixins
 ```
+
+## Container Rules
+**CRITICAL:** Containers must NEVER be nested inside other containers of any type. Each container variant (`.container`, `.container--nav`, `.container-fluid`, `.container-sec-header`) is a standalone layout element with its own padding and max-width. Use separate sibling containers instead of nesting them.
 
 ## Import Order
 `main.scss` must load utilities first, then base, layout, and finally components:
@@ -57,6 +60,7 @@ Maintain this sequence so variables and mixins are available before they are use
 - Scope selectors to the component block (`.hero`, `.testimonial`, etc.).
 - Use BEM naming with double underscores for elements and double hyphens for modifiers.
 - Keep responsive rules mobile-first with `@media (min-width: $breakpoint)` queries from `_variables.scss`.
+- Do NOT add `background-color` to component stylesheets. Use the `page-sec--bg-white` or `page-sec--bg-gray` modifiers in the component markup instead.
 - Add the file to `main.scss` immediately after creation to ensure it is bundled.
 
 ## Tokens and Utilities

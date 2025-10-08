@@ -19,8 +19,6 @@
     flex-direction: column;
     align-items: center;
     gap: 32px;
-    max-width: 887px;
-    width: 100%;
   }
 
   &__cta-title {
@@ -40,7 +38,7 @@
   // Main Footer Grid
   &__grid {
     display: flex;
-    padding: 50px 30px;
+    padding: 50px 0;
     flex-direction: column;
     align-items: center;
     background: $color-black;
@@ -51,7 +49,6 @@
     flex-direction: column;
     gap: 50px;
     width: 100%;
-    max-width: 315px;
   }
 
   // Brand Section

@@ -13,7 +13,6 @@
 
   &__image-wrapper {
     width: 100%;
-    max-width: 315px;
     margin: 0 auto;
   }
 
@@ -80,7 +79,28 @@
     display: flex;
     align-items: center;
     gap: 41px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: rgba($color-primary, 0.3) transparent;
+
+    &::-webkit-scrollbar {
+      height: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba($color-primary, 0.3);
+      border-radius: 2px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: rgba($color-primary, 0.5);
+    }
   }
 
   &__logo {
@@ -88,6 +108,7 @@
     align-items: center;
     justify-content: center;
     height: 48px;
+    flex-shrink: 0;
     
     img, svg {
       height: 100%;
